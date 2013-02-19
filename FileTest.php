@@ -18,7 +18,11 @@ class FileTest extends PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->object = new File;
+      setlocale(LC_ALL, 'en_US.UTF-8');
+      putenv('LC_ALL=en_US.UTF-8');
+      putenv('LANG=en_US.UTF-8');
+      putenv('LANGUAGE=C');
+      $this->object = new File;
     }
 
     /**
