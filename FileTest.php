@@ -27,6 +27,7 @@ class FileTest extends PHPUnit_Framework_TestCase
      */
     protected function tearDown()
     {
+      unset($this->object);
     }
 
     /**
@@ -37,5 +38,12 @@ class FileTest extends PHPUnit_Framework_TestCase
     {
       $this->assertEquals(array('高&执&行&力&的&打&造.txt'),
                           $this->object->listFiles());
+    }
+
+    public function testBaseName()
+    {
+      $files = $this->object->listFiles();
+      $this->assertEquals('高&执&行&力&的&打&造.txt',
+                          basename($files[0]));
     }
 }
