@@ -12,9 +12,11 @@ before_script:
   - pear install -f -n channel://pear.horde.org/Horde_Test
   - pear install -f -n horde/horde_role
   - pear config-show
-  - php -i | grep include_path
-  - ( test -d /home/travis/.phpenv/versions/7.0/share/pear && ls -lR /home/travis/.phpenv/versions/7.0/share/pear ) || true
-  - ( test -d /home/travis/.phpenv/versions/7.0/lib/php/pear && ls -lR /home/travis/.phpenv/versions/7.0/lib/php/pear ) || true
-  - ( test -d /home/travis/.phpenv/versions/5.6/share/pear && ls -lR /home/travis/.phpenv/versions/5.6/share/pear ) || true
-  - ( test -d /home/travis/.phpenv/versions/5.6/lib/php/pear && ls -lR /home/travis/.phpenv/versions/5.6/lib/php/pear ) || true
-  - ( test -d /home/travis/.phpenv/versions/5.6/pear && ls -lR /home/travis/.phpenv/versions/5.6/pear ) || true
+  - cat /home/travis/.pearrc
+  - cat /home/travis/.phpenv/versions/7.0.0/etc/pear.conf
+#  - php -i | grep include_path
+#  - ( test -d /home/travis/.phpenv/versions/7.0/share/pear && ls -lR /home/travis/.phpenv/versions/7.0/share/pear ) || true
+#  - ( test -d /home/travis/.phpenv/versions/7.0/lib/php/pear && ls -lR /home/travis/.phpenv/versions/7.0/lib/php/pear ) || true
+#  - ( test -d /home/travis/.phpenv/versions/5.6/share/pear && ls -lR /home/travis/.phpenv/versions/5.6/share/pear ) || true
+#  - ( test -d /home/travis/.phpenv/versions/5.6/lib/php/pear && ls -lR /home/travis/.phpenv/versions/5.6/lib/php/pear ) || true
+#  - ( test -d /home/travis/.phpenv/versions/5.6/pear && ls -lR /home/travis/.phpenv/versions/5.6/pear ) || true
