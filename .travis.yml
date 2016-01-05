@@ -17,3 +17,4 @@ before_script:
   - ( test -d /home/travis/.phpenv/versions/7.0/lib/php/pear && ls -lR /home/travis/.phpenv/versions/7.0/lib/php/pear ) || true
   - ( test -d /home/travis/.phpenv/versions/5.6/share/pear && ls -lR /home/travis/.phpenv/versions/5.6/share/pear ) || true
   - ( test -d /home/travis/.phpenv/versions/5.6/lib/php/pear && ls -lR /home/travis/.phpenv/versions/5.6/lib/php/pear ) || true
+  - ( test -d /home/travis/.phpenv/versions/5.6/pear && ls -lR /home/travis/.phpenv/versions/5.6/pear ) || true
