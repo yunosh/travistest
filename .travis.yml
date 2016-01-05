@@ -13,7 +13,7 @@ before_script:
   - pear install -f -n horde/horde_role
   - pear config-show
   - cat /home/travis/.pearrc
-  - cat /home/travis/.phpenv/versions/7.0.0/etc/pear.conf
+  - cat /home/travis/.phpenv/versions/${TRAVIS_PHP_VERSION}/etc/pear.conf
 #  - php -i | grep include_path
 #  - ( test -d /home/travis/.phpenv/versions/7.0/share/pear && ls -lR /home/travis/.phpenv/versions/7.0/share/pear ) || true
 #  - ( test -d /home/travis/.phpenv/versions/7.0/lib/php/pear && ls -lR /home/travis/.phpenv/versions/7.0/lib/php/pear ) || true
