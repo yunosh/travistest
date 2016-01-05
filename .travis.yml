@@ -11,6 +11,6 @@ before_script:
   - pear install -f -n channel://pear.horde.org/Horde_Test
   - pear install -f -n horde/horde_role
   - pear config-show
-  - php -r 'echo get_include_path();'
+  - php -i | grep include_path
   - ls -lR /home/travis/.phpenv/versions/7.0.0/share/pear
-  - ls -lR /home/travis/.phpenv/versions/7.0.0/pear
+  - ls -lR /home/travis/.phpenv/versions/7.0.0/lib/php/pear
