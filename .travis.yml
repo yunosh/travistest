@@ -12,7 +12,7 @@ before_script:
   - pear install -f -n horde/horde_role
   - pear config-show
   - php -i | grep include_path
-  - test -d /home/travis/.phpenv/versions/7.0.0/share/pear && ls -lR /home/travis/.phpenv/versions/7.0.0/share/pear
-  - test -d /home/travis/.phpenv/versions/7.0.0/lib/php/pear && ls -lR /home/travis/.phpenv/versions/7.0.0/lib/php/pear
-  - test -d /home/travis/.phpenv/versions/5.6.5/share/pear && ls -lR /home/travis/.phpenv/versions/5.6.5/share/pear
-  - test -d /home/travis/.phpenv/versions/5.6.5/lib/php/pear && ls -lR /home/travis/.phpenv/versions/5.6.5/lib/php/pear
+  - ( test -d /home/travis/.phpenv/versions/7.0.0/share/pear && ls -lR /home/travis/.phpenv/versions/7.0.0/share/pear ) || true
+  - ( test -d /home/travis/.phpenv/versions/7.0.0/lib/php/pear && ls -lR /home/travis/.phpenv/versions/7.0.0/lib/php/pear ) || true
+  - ( test -d /home/travis/.phpenv/versions/5.6.5/share/pear && ls -lR /home/travis/.phpenv/versions/5.6.5/share/pear ) || true
+  - ( test -d /home/travis/.phpenv/versions/5.6.5/lib/php/pear && ls -lR /home/travis/.phpenv/versions/5.6.5/lib/php/pear ) || true
