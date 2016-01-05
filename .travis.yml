@@ -9,8 +9,8 @@ php:
 before_script:
   - pear channel-discover pear.horde.org
   - pear install -f channel://pear.horde.org/Horde_Test
-  - ls -lR /home/travis/.phpenv
+  - ls -lR /home/travis/.phpenv/share/pear
   - pear install -f horde/horde_role
   - pear config-show
-  - ls -lR /home/travis/.phpenv
+  - ls -lR /home/travis/.phpenv/share/pear
   
