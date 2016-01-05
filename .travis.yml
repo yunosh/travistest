@@ -10,3 +10,7 @@ before_script:
   - pear channel-discover pear.horde.org
   - pear install channel://pear.horde.org/Horde_Test
   - ls -lR /home/travis/.phpenv
+  - pear install horde/horde_role
+  - pear config-show
+  - ls -lR /home/travis/.phpenv
+  
